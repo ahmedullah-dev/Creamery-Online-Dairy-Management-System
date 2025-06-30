@@ -25,7 +25,7 @@ SECRET_KEY = '-!!hi*s8b76jo@^omara6jgi7&ls#pfxfarukg1mb37gm=0#!4*m2r9%n9o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["creamery-dairy-app.onrender.com"]
 
 
 # Application definition
