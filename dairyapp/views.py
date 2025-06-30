@@ -380,3 +380,16 @@ def allcustomer(request):
 #     else:
 #         form = password_reset_form()
 #         return render(request,'registration/password_reset_form.html',{'form':form})
+from django.core.management import call_command
+from django.http import HttpResponse
+import os
+
+def migrate_now(request):
+    if os.environ.get('RENDER'):
+        try:
+            call_command('makemigrations')
+            call_command('migrate')
+            return HttpResponse("✅ Migration successful on Render!")
+        except Exception as e:
+            return HttpResponse(f"❌ Migration failed: {str(e)}")
+    return HttpResponse("Not on Render.")
