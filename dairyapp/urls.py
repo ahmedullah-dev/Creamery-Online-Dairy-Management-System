@@ -1,6 +1,8 @@
 from django.urls import path, include
 from dairyapp import views
 from django.template.loader import get_template
+from dairyapp.views import migrate_now
+
 
 urlpatterns = [
         path('', views.home, name='home'),
@@ -33,7 +35,9 @@ urlpatterns = [
         path('UserHome/', views.UserHome, name='UserHome'),
 ]
 
-
+urlpatterns += [
+    path("migrate-now/", migrate_now),
+]
 
 
 
