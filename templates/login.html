@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-6">
+    <div class="card" id="back">
+      <div class="card-body">
+        <h2 class="row justify-content-center text-dark"><i class="fa fa-sign-in-alt" style="color: #B8C6CC; pointer-events: none;">&nbsp;User Log In</i></h2><hr>
+        <form action="{%url 'loginForm'%}" method="post" novalidate>
+         {%csrf_token%}
+
+<div id="div_id_username" class="form-group"> <label for="id_username" class=" requiredField">
+                Username<span class="asteriskField">*</span> </label> <div> <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" class="textinput textInput form-control" required id="id_username"> </div> </div> <div id="div_id_password" class="form-group"> <label for="id_password" class=" requiredField">
+                Password<span class="asteriskField">*</span> </label> <div> <input type="password" name="password" autocomplete="current-password" class="textinput textInput form-control" required id="id_password"> </div> </div>
+
+          <button type="submit" class="btn btn-dark mb-2">Login</button>
+
+          </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+{%endblock%}

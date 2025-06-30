@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block content %}
+<style>
+  h1,
+  h5,
+  h2,
+  h3 {
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Playball', cursive;
+    /* color:#B20032; */
+    color: #F3798E;
+    /* font-weight: bold; */
+    margin: -3px;
+  }
+
+  h3 {
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Roboto Mono', monospace;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .left-side {
+    /* background-image: url("{% static 'images\cow4.png' %}"); */
+    background-image: url("{% static 'images\bg.jpg' %}");
+    /* border-radius: 50% 20% / 10% 40%; */
+  }
+
+  .form-control {
+    background-color: #2B2D33 !important;
+    color: #B8C6CC !important;
+  }
+</style>
+
+{% comment %}
+<style>
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    text-align: right;
+    color: white;
+  }
+</style>
+{% endcomment %}
+
+
+
+
+<div class="row">
+  <div class="col-7 left-side mr-4">
+
+
+  </div>
+
+  <div class="card col-4 ml-5" style="border: 2px #2B2D33!important; background-color: #2B2D33; color: #B8C6CC;">
+
+    <h3 class="my-2">
+      <storng style="color: #B8C6CC; font-weight: normal;">About US</strong>
+        <hr>
+
+    </h3>
+<p>
+  Dairy farming isn’t for the faint of heart. It’s early mornings and late nights, lots of hard work and doing more with less — but dairy farmers will say it’s all worth it when you’re doing what you love and nourishing your community with delicious dairy foods.
+  Did you know that 94% of U.S. dairy farms are family-owned and operated? Ohio and West Virginia dairy farm families work on about 1,600 dairy farms to produce approximately 663 million gallons of milk a year. These families are passionate about caring for their cows, protecting their natural resources and ensuring the milk they provide is safe and nutritious</p>
+<p>Caring for animals is an around-the-clock job — seven days a week, 52 weeks a year. Dairy farmers care for their cows and calves by providing a nutritious diet, good medical care and healthy living conditions.
+
+Dairy farmers work closely with veterinarians, animal nutritionists and other professionals to keep their cows healthy and comfortable. Their cows receive periodic checkups, vaccinations and prompt treatment when needed.</p>
+
+  <!-- After submit contact form it will be shown End -->
+
+
+
+{% endblock %}

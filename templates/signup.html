@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-6">
+    <div class="card" id="back">
+
+      <div class="card-body">
+        <h2 class="row justify-content-center text-dark"><i class="fa fa-sign-in-alt" style="color: #B8C6CC; pointer-events: none;">&nbsp;Registrations</i></h2><hr>
+
+          </div>
+         <form action="{%url 'signup'%}" method="POST"  style="width:100%">
+
+                    {% csrf_token %}
+  <table>
+                        <tr>
+                            <td>User Name</td>
+                            <td style="color:black">{{form.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Login ID</td>
+                            <td style="color:black">{{form.loginid}}</td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td style="color:black">{{form.password}}</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td style="color:black">{{form.mobile}}</td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td style="color:black">{{form.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Locality</td>
+                            <td style="color:black">{{form.locality}}</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td style="color:black">{{form.address}}</td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td style="color:black">{{form.city}}</td>
+                        </tr>
+                        <tr>
+                            <td>State</td>
+                            <td style="color:black">{{form.state}}</td>
+                        </tr>
+                        <tr>
+
+                            <td style="color:black">{{form.status}}</td>
+                        </tr>
+ <tr>
+                            <td></td>
+     <td> <button class="btn btn-block btn-primary text-white py-3 px-5" style="margin-center:20%;"
+                                        type="submit">
+                                    Register
+                                </button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group mt-3">
+                                <span  >&nbsp;</span>
+                            </div>
+                            </td>
+                        </tr>
+
+                        {% if messages %}
+                        {% for message in messages %}
+                        <font color='red'> {{ message }}</font>
+                        {% endfor %}
+                        {% endif %}
+
+                    </table>
+
+                </form>
+      </div>
+  </div>
+</div>
+
+{%endblock%}
